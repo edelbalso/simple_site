@@ -1,0 +1,24 @@
+body {
+	background-color: #ddd;
+	font-family: Helvetica, sans-serif;
+	color: #333;
+}
+
+header {
+	p {
+		color: yellow;
+		.emphasis {
+			text-transform: italic;
+		}
+	}
+}
+
+content {
+	h1 {
+		font-size: 20px;
+	}
+
+	p {
+		color: #666;
+	}
+}
