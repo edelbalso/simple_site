@@ -1,6 +1,51 @@
 =render 'partials/header'
 
-%p 
-  I am content
+.container.mockup
 
-= render 'partials/footer'
+  .row
+    .span12
+      %h1 My Dashboard
+
+.form-container.container
+  .mockup
+    .row
+      .span2.form-menu
+        .market-forms-icon
+          Img Here
+
+        .add-form-button
+          %a.create-form-button{ :href => "#" } Create Form
+
+        .form-selector
+          %ul
+            %li Untitled Forms (6)
+            %li.selected Filed Forms
+            %li Search Forms
+            %li Sync with Edgar
+
+      .span8
+        .form-lister
+          .headers
+            .cell.title
+              %h3 Form Title
+            .cell.status
+              %h3 Status
+            .cell.action
+              %h3 Action
+          .form-entry
+            .cell.title
+              %a{ :href => '#' } Form 4 - Niraj Khanna
+            .cell.status
+              Invalid
+            .cell.action
+              ^
+
+      .span2
+        %h3 Recent Activity
+        %ul
+          %li SEC charge marketforms with illegal filing activity. Brown man suspected.
+          %li SEC charge marketforms with illegal filing activity. Brown man suspected.
+          %li SEC charge marketforms with illegal filing activity. Brown man suspected.
+          %li SEC charge marketforms with illegal filing activity. Brown man suspected.
+          %li SEC charge marketforms with illegal filing activity. Brown man suspected.
+          %li SEC charge marketforms with illegal filing activity. Brown man suspected.

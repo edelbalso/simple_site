@@ -1,24 +1,104 @@
+@import "compass";
+
 body {
-	background-color: #ddd;
+	background-color: #f7f8f9;
 	font-family: Helvetica, sans-serif;
 	color: #333;
+  border-top: 10px solid #4c90c3;
 }
 
-header {
-	p {
-		color: yellow;
-		.emphasis {
-			text-transform: italic;
-		}
-	}
+.mockup {
+	h1 { font-size: 36px; margin: 36px 0 24px 0; }
+	p { color: #666; }
+
 }
 
-content {
-	h1 {
-		font-size: 20px;
-	}
+.form-container {
+  border: 1px solid #d9d9d9;
+  padding:10px;
+  margin:0;
 
-	p {
-		color: #666;
-	}
+  @include border-radius(4px);
+
+  background-color: #f0f0f0;
+
+  .market-forms-icon {
+    padding: 24px;
+  }
+
+  .add-form-button {
+    background-color: #f7f8f9;
+    color: #4c90c3;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px 6px;
+    @include single-box-shadow(#dcdcdc,1px,1px,2px);
+    @include border-radius(4px);
+    margin-bottom:12px;
+
+    a:hover { text-decoration: none; }
+  }
+
+  ul {
+    @include no-bullets();
+    padding:0;
+    margin: 0;
+    li {
+
+      &.selected {
+        @include single-box-shadow(#dcdcdc,1px,1px,2px);
+        @include border-radius(4px);
+        background-color: #f7f8f9;
+        color: #666;
+        font-weight: bold;
+      }
+      font-size: 15px;
+      padding: 12px 6px;
+      margin-bottom:12px;
+
+      a:hover { text-decoration: none; }
+    }
+  }
+
+  .form-lister {
+    @include single-box-shadow(#dcdcdc,1px,1px,2px);
+    @include border-radius(4px);
+    background-color: #f7f8f9;
+    color: #666;
+    font-weight: bold;
+
+    padding: 12px;
+
+    .cell {
+      @include inline-block();
+    }
+
+    .title  { width: 50%; }
+    .status { width: 35%; text-align: center; }
+    .action { width: 12%; text-align: center; }
+
+    .headers {
+      border-bottom: 1px solid #d9d9d9;
+      margin-bottom:12px;
+      h3 { font-size: 14px; text-align:center; }
+    }
+
+    .form-entry {
+      padding: 12px;
+      border: 1px solid #dfdbdb;
+      margin-bottom: 12px;
+
+      @include background-image(linear-gradient(#f2f2f1, #e8e6e6));
+      @include border-radius(4px);
+
+      .title  { border-right: 1px solid #e0dede; }
+      .status { border-right: 1px solid #e8e6e6; border-left: 1px solid #e8e6e6; }
+    }
+
+    .form-validity {
+      text-align: center;
+    }
+
+  }
 }
+
